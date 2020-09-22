@@ -60,8 +60,10 @@
     <Compile Include="MenuPrincipale.Designer.cs">
       <DependentUpon>MenuPrincipale.cs</DependentUpon>
     </Compile>
+    <Compile Include="ParametriRicercaStrutture.cs" />
     <Compile Include="Queries.cs" />
     <Compile Include="Recensione.cs" />
+    <Compile Include="Struttura.cs" />
     <Compile Include="VisualizzaRecensione.cs">
       <SubType>Form</SubType>
     </Compile>

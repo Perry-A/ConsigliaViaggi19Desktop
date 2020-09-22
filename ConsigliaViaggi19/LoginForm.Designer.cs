@@ -33,6 +33,7 @@
             this.passwordLabel = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
+            this.mostraPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // usernameLabel
@@ -70,7 +71,7 @@
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(215, 129);
+            this.loginButton.Location = new System.Drawing.Point(215, 149);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(69, 24);
             this.loginButton.TabIndex = 4;
@@ -78,11 +79,23 @@
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
-            // loginForm
+            // mostraPasswordCheckBox
+            // 
+            this.mostraPasswordCheckBox.AutoSize = true;
+            this.mostraPasswordCheckBox.Location = new System.Drawing.Point(178, 118);
+            this.mostraPasswordCheckBox.Name = "mostraPasswordCheckBox";
+            this.mostraPasswordCheckBox.Size = new System.Drawing.Size(106, 17);
+            this.mostraPasswordCheckBox.TabIndex = 5;
+            this.mostraPasswordCheckBox.Text = "Mostra password";
+            this.mostraPasswordCheckBox.UseVisualStyleBackColor = true;
+            this.mostraPasswordCheckBox.CheckedChanged += new System.EventHandler(this.mostraPasswordCheckBox_CheckedChanged);
+            // 
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 174);
+            this.ClientSize = new System.Drawing.Size(318, 185);
+            this.Controls.Add(this.mostraPasswordCheckBox);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.passwordLabel);
@@ -93,7 +106,7 @@
             this.MaximumSize = new System.Drawing.Size(586, 361);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(100, 100);
-            this.Name = "loginForm";
+            this.Name = "LoginForm";
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -107,6 +120,7 @@
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Button loginButton;
         public System.Windows.Forms.TextBox usernameTextBox;
+        private System.Windows.Forms.CheckBox mostraPasswordCheckBox;
     }
 }
 

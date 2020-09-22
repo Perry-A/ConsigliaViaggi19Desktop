@@ -44,6 +44,7 @@ namespace ConsigliaViaggi19
                     Show();
                     usernameTextBox.Text = "";
                     passwordTextBox.Text = "";
+                    mostraPasswordCheckBox.Checked = false;
                 }
             }
             catch(SqlException)
@@ -57,6 +58,14 @@ namespace ConsigliaViaggi19
             if (usernameTextBox.Text.Length != 0 && passwordTextBox.Text.Length != 0)
                 return false;
             return true;
+        }
+
+        private void mostraPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (mostraPasswordCheckBox.Checked)
+                passwordTextBox.UseSystemPasswordChar = false;
+            else
+                passwordTextBox.UseSystemPasswordChar = true;
         }
 
         private MenuPrincipale menuPrincipale;

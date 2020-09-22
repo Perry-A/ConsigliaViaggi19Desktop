@@ -21,6 +21,9 @@ namespace ConsigliaViaggi19
             visualizzaRecensione = new VisualizzaRecensione();
         }
 
+        public bool UsaIdStruttura { get; set; }
+        public int IdStruttura { get; set; } 
+
         protected override void OnShown(EventArgs e)
         {
             OttieniRecensioniDalDatabase();
@@ -41,7 +44,10 @@ namespace ConsigliaViaggi19
             try
             {
                 recensioni = null;
-                recensioni = Queries.GetRecensioni();
+                if (!UsaIdStruttura)
+                    recensioni = Queries.GetRecensioni();
+                else
+                    recensioni = Queries.GetRecensioni(IdStruttura);
             }
             catch(SqlException)
             {

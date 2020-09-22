@@ -28,120 +28,110 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RicercaPersonalizzata));
-            this.mvMin = new System.Windows.Forms.Label();
-            this.mvMax = new System.Windows.Forms.Label();
-            this.comboBoxMin = new System.Windows.Forms.ComboBox();
-            this.comboBoxMax = new System.Windows.Forms.ComboBox();
-            this.city = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.applica = new System.Windows.Forms.Button();
+            this.valutazioneMinimaLabel = new System.Windows.Forms.Label();
+            this.valutazioneMassimaLabel = new System.Windows.Forms.Label();
+            this.valutazioneMinimaComboBox = new System.Windows.Forms.ComboBox();
+            this.valutazioneMassimaComboBox = new System.Windows.Forms.ComboBox();
+            this.cittaLabel = new System.Windows.Forms.Label();
+            this.cittaComboBox = new System.Windows.Forms.ComboBox();
+            this.applicaButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // mvMin
+            // valutazioneMinimaLabel
             // 
-            this.mvMin.AutoSize = true;
-            this.mvMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mvMin.Location = new System.Drawing.Point(79, 182);
-            this.mvMin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.mvMin.Name = "mvMin";
-            this.mvMin.Size = new System.Drawing.Size(202, 20);
-            this.mvMin.TabIndex = 0;
-            this.mvMin.Text = "Media valutazione minima";
+            this.valutazioneMinimaLabel.AutoSize = true;
+            this.valutazioneMinimaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valutazioneMinimaLabel.Location = new System.Drawing.Point(59, 25);
+            this.valutazioneMinimaLabel.Name = "valutazioneMinimaLabel";
+            this.valutazioneMinimaLabel.Size = new System.Drawing.Size(166, 16);
+            this.valutazioneMinimaLabel.TabIndex = 0;
+            this.valutazioneMinimaLabel.Text = "Media valutazione minima:";
             // 
-            // mvMax
+            // valutazioneMassimaLabel
             // 
-            this.mvMax.AutoSize = true;
-            this.mvMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mvMax.Location = new System.Drawing.Point(79, 257);
-            this.mvMax.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.mvMax.Name = "mvMax";
-            this.mvMax.Size = new System.Drawing.Size(216, 20);
-            this.mvMax.TabIndex = 1;
-            this.mvMax.Text = "Media valutazione massima";
+            this.valutazioneMassimaLabel.AutoSize = true;
+            this.valutazioneMassimaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valutazioneMassimaLabel.Location = new System.Drawing.Point(47, 69);
+            this.valutazioneMassimaLabel.Name = "valutazioneMassimaLabel";
+            this.valutazioneMassimaLabel.Size = new System.Drawing.Size(178, 16);
+            this.valutazioneMassimaLabel.TabIndex = 1;
+            this.valutazioneMassimaLabel.Text = "Media valutazione massima:";
             // 
-            // comboBoxMin
+            // valutazioneMinimaComboBox
             // 
-            this.comboBoxMin.FormattingEnabled = true;
-            this.comboBoxMin.Items.AddRange(new object[] {
+            this.valutazioneMinimaComboBox.FormattingEnabled = true;
+            this.valutazioneMinimaComboBox.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
             "4",
             "5"});
-            this.comboBoxMin.Location = new System.Drawing.Point(423, 176);
-            this.comboBoxMin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBoxMin.Name = "comboBoxMin";
-            this.comboBoxMin.Size = new System.Drawing.Size(61, 24);
-            this.comboBoxMin.TabIndex = 2;
-            this.comboBoxMin.Text = "1";
-            this.comboBoxMin.SelectedIndexChanged += new System.EventHandler(this.comboBoxMin_SelectedIndexChanged);
+            this.valutazioneMinimaComboBox.Location = new System.Drawing.Point(240, 25);
+            this.valutazioneMinimaComboBox.Name = "valutazioneMinimaComboBox";
+            this.valutazioneMinimaComboBox.Size = new System.Drawing.Size(47, 21);
+            this.valutazioneMinimaComboBox.TabIndex = 2;
+            this.valutazioneMinimaComboBox.Text = "0";
             // 
-            // comboBoxMax
+            // valutazioneMassimaComboBox
             // 
-            this.comboBoxMax.FormattingEnabled = true;
-            this.comboBoxMax.Items.AddRange(new object[] {
+            this.valutazioneMassimaComboBox.FormattingEnabled = true;
+            this.valutazioneMassimaComboBox.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4",
             "5"});
-            this.comboBoxMax.Location = new System.Drawing.Point(423, 251);
-            this.comboBoxMax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBoxMax.Name = "comboBoxMax";
-            this.comboBoxMax.Size = new System.Drawing.Size(61, 24);
-            this.comboBoxMax.TabIndex = 3;
-            this.comboBoxMax.Text = "5";
+            this.valutazioneMassimaComboBox.Location = new System.Drawing.Point(240, 69);
+            this.valutazioneMassimaComboBox.Name = "valutazioneMassimaComboBox";
+            this.valutazioneMassimaComboBox.Size = new System.Drawing.Size(47, 21);
+            this.valutazioneMassimaComboBox.TabIndex = 3;
+            this.valutazioneMassimaComboBox.Text = "5";
             // 
-            // city
+            // cittaLabel
             // 
-            this.city.AutoSize = true;
-            this.city.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.city.Location = new System.Drawing.Point(79, 332);
-            this.city.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.city.Name = "city";
-            this.city.Size = new System.Drawing.Size(44, 20);
-            this.city.TabIndex = 4;
-            this.city.Text = "Città";
+            this.cittaLabel.AutoSize = true;
+            this.cittaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cittaLabel.Location = new System.Drawing.Point(112, 113);
+            this.cittaLabel.Name = "cittaLabel";
+            this.cittaLabel.Size = new System.Drawing.Size(37, 16);
+            this.cittaLabel.TabIndex = 4;
+            this.cittaLabel.Text = "Città:";
             // 
-            // textBox1
+            // cittaComboBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(179, 327);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 22);
-            this.textBox1.TabIndex = 5;
+            this.cittaComboBox.FormattingEnabled = true;
+            this.cittaComboBox.Location = new System.Drawing.Point(170, 112);
+            this.cittaComboBox.Name = "cittaComboBox";
+            this.cittaComboBox.Size = new System.Drawing.Size(121, 21);
+            this.cittaComboBox.TabIndex = 7;
             // 
-            // applica
+            // applicaButton
             // 
-            this.applica.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.applica.Location = new System.Drawing.Point(227, 448);
-            this.applica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.applica.Name = "applica";
-            this.applica.Size = new System.Drawing.Size(156, 57);
-            this.applica.TabIndex = 6;
-            this.applica.Text = "Applica";
-            this.applica.UseVisualStyleBackColor = true;
-            this.applica.Click += new System.EventHandler(this.applica_Click);
+            this.applicaButton.Location = new System.Drawing.Point(216, 162);
+            this.applicaButton.Name = "applicaButton";
+            this.applicaButton.Size = new System.Drawing.Size(75, 23);
+            this.applicaButton.TabIndex = 8;
+            this.applicaButton.Text = "Applica";
+            this.applicaButton.UseVisualStyleBackColor = true;
+            this.applicaButton.Click += new System.EventHandler(this.applicaButton_Click);
             // 
             // RicercaPersonalizzata
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(645, 671);
-            this.Controls.Add(this.applica);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.city);
-            this.Controls.Add(this.comboBoxMax);
-            this.Controls.Add(this.comboBoxMin);
-            this.Controls.Add(this.mvMax);
-            this.Controls.Add(this.mvMin);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(339, 221);
+            this.Controls.Add(this.applicaButton);
+            this.Controls.Add(this.cittaComboBox);
+            this.Controls.Add(this.cittaLabel);
+            this.Controls.Add(this.valutazioneMassimaComboBox);
+            this.Controls.Add(this.valutazioneMinimaComboBox);
+            this.Controls.Add(this.valutazioneMassimaLabel);
+            this.Controls.Add(this.valutazioneMinimaLabel);
+            this.MaximizeBox = false;
             this.Name = "RicercaPersonalizzata";
             this.Text = "RicercaPersonalizzata";
-            this.Load += new System.EventHandler(this.RicercaPersonalizzata_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,12 +139,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label mvMin;
-        private System.Windows.Forms.Label mvMax;
-        private System.Windows.Forms.ComboBox comboBoxMin;
-        private System.Windows.Forms.ComboBox comboBoxMax;
-        private System.Windows.Forms.Label city;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button applica;
+        private System.Windows.Forms.Label valutazioneMinimaLabel;
+        private System.Windows.Forms.Label valutazioneMassimaLabel;
+        private System.Windows.Forms.ComboBox valutazioneMinimaComboBox;
+        private System.Windows.Forms.ComboBox valutazioneMassimaComboBox;
+        private System.Windows.Forms.Label cittaLabel;
+        private System.Windows.Forms.ComboBox cittaComboBox;
+        private System.Windows.Forms.Button applicaButton;
     }
 }

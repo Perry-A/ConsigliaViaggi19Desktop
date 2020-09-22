@@ -41,7 +41,7 @@
             // 
             this.ordinaComboBox.FormattingEnabled = true;
             this.ordinaComboBox.Items.AddRange(new object[] {
-            "Non letti",
+            "Non lette",
             "Dal più recente",
             "Dal meno recente"});
             this.ordinaComboBox.Location = new System.Drawing.Point(12, 8);
@@ -116,7 +116,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(398, 474);
             this.Name = "Recensioni";
-            this.Text = "ConsigliaViaggi19 - Notifiche";
+            this.Text = "ConsigliaViaggi19 - Recensioni";
             this.ResumeLayout(false);
 
         }
