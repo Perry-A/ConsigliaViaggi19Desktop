@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="ConsigliaViaggi19.MenuPrincipale">
+    <Position X="2.75" Y="0.75" Width="6" />
+    <TypeIdentifier>
+      <HashCode>ACAABAAACCABCAAAEADAAAAKgAAAAIAAAAAAAAgCAgQ=</HashCode>
+      <FileName>MenuPrincipale.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="recensioni" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ConsigliaViaggi19.Queries">
+    <Position X="10.25" Y="1" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAggAABAAAABAAAAQAAAAAAAAACACQAAAAAAA=</HashCode>
+      <FileName>Queries.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsigliaViaggi19.Recensione">
+    <Position X="16" Y="8" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAABAIAAgAAAAQAgAAAAABAEACBAAAAAAAAA=</HashCode>
+      <FileName>Recensione.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsigliaViaggi19.VisualizzaRecensione">
+    <Position X="10.5" Y="5.25" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAgAIAgAKiCBgAAAAgCACAACAFAQAgBAYgSQCQAQACA=</HashCode>
+      <FileName>VisualizzaRecensione.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Recensione" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ConsigliaViaggi19.Recensioni">
+    <Position X="2.75" Y="7" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAggAGABCGQAAgCCACASAAAAQAAQgBkAAAACAAA=</HashCode>
+      <FileName>Recensioni.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="visualizzaRecensione" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

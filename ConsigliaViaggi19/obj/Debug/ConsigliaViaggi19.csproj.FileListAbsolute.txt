@@ -18,11 +18,11 @@ C:\Users\Giuseppe\Desktop\c#\ConsigliaViaggi19\ConsigliaViaggi19\bin\Debug\Consi
 C:\Users\Giuseppe\Desktop\c#\ConsigliaViaggi19\ConsigliaViaggi19\obj\Debug\ConsigliaViaggi19.csprojAssemblyReference.cache
 C:\Users\Giuseppe\Desktop\c#\ConsigliaViaggi19\ConsigliaViaggi19\obj\Debug\ConsigliaViaggi19.loginForm.resources
 C:\Users\Giuseppe\Desktop\c#\ConsigliaViaggi19\ConsigliaViaggi19\obj\Debug\ConsigliaViaggi19.MenuPrincipale.resources
-C:\Users\Giuseppe\Desktop\c#\ConsigliaViaggi19\ConsigliaViaggi19\obj\Debug\ConsigliaViaggi19.Recensione.resources
 C:\Users\Giuseppe\Desktop\c#\ConsigliaViaggi19\ConsigliaViaggi19\obj\Debug\ConsigliaViaggi19.Properties.Resources.resources
-C:\Users\Giuseppe\Desktop\c#\ConsigliaViaggi19\ConsigliaViaggi19\obj\Debug\ConsigliaViaggi19.RecensioniNotifiche.resources
 C:\Users\Giuseppe\Desktop\c#\ConsigliaViaggi19\ConsigliaViaggi19\obj\Debug\ConsigliaViaggi19.RicercaPersonalizzata.resources
 C:\Users\Giuseppe\Desktop\c#\ConsigliaViaggi19\ConsigliaViaggi19\obj\Debug\ConsigliaViaggi19.csproj.GenerateResource.cache
 C:\Users\Giuseppe\Desktop\c#\ConsigliaViaggi19\ConsigliaViaggi19\obj\Debug\ConsigliaViaggi19.csproj.CoreCompileInputs.cache
 C:\Users\Giuseppe\Desktop\c#\ConsigliaViaggi19\ConsigliaViaggi19\obj\Debug\ConsigliaViaggi19.exe
 C:\Users\Giuseppe\Desktop\c#\ConsigliaViaggi19\ConsigliaViaggi19\obj\Debug\ConsigliaViaggi19.pdb
+C:\Users\Giuseppe\Desktop\c#\ConsigliaViaggi19\ConsigliaViaggi19\obj\Debug\ConsigliaViaggi19.VisualizzaRecensione.resources
+C:\Users\Giuseppe\Desktop\c#\ConsigliaViaggi19\ConsigliaViaggi19\obj\Debug\ConsigliaViaggi19.Recensioni.resources

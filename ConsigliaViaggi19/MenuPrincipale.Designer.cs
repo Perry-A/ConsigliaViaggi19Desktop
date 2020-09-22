@@ -94,6 +94,7 @@
             this.notificheButton.TabIndex = 7;
             this.notificheButton.Text = "Notifiche";
             this.notificheButton.UseVisualStyleBackColor = true;
+            this.notificheButton.Click += new System.EventHandler(this.notificheButton_Click);
             // 
             // logoutButton
             // 
@@ -107,7 +108,7 @@
             // 
             // struttureListView
             // 
-            this.struttureListView.BackColor = System.Drawing.Color.LimeGreen;
+            this.struttureListView.BackColor = System.Drawing.Color.LightGreen;
             this.struttureListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.immagineColonna,
             this.infoStrutturaColonna,

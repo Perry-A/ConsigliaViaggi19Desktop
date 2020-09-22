@@ -1,5 +1,4 @@
-﻿using ConsigliaViaggi19App;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +17,7 @@ namespace ConsigliaViaggi19
         public MenuPrincipale()
         {
             InitializeComponent();
+            recensioni = new Recensioni();
         }
 
         protected override void OnShown(EventArgs e)
@@ -48,6 +48,12 @@ namespace ConsigliaViaggi19
             }
         }
 
+        private void notificheButton_Click(object sender, EventArgs e)
+        {
+            recensioni.ShowDialog();
+        }
+
         public string UsernameAmministratore { get; set; }
+        private Recensioni recensioni;
     }
 }

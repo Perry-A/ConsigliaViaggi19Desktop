@@ -6,11 +6,47 @@ using System.Data;
 using System.IO;
 using System.Collections.ObjectModel;
 using System.Configuration;
+using ConsigliaViaggi19;
 
-namespace ConsigliaViaggi19App
+namespace ConsigliaViaggi19
 {
     static class Queries
-    {         
+    {    
+        public static void CambiaStatoRecensione(int idRecensione, string nuovoStato)
+        {
+            string query = $"update Recensioni set stato = '{nuovoStato}' where idRecensione = {idRecensione}";
+            EseguiModifica(query);
+        }
+
+        public static List<Recensione> GetRecensioni()
+        {
+            string query = "select R.idRecensione, R.valutazione, R.commento, R.stato, R.dataCreazione, R.nicknameUtente, " +
+                           "U.nome, U.cognome, S.nome as nomeStruttura, S.tipo " +
+                           "from Recensioni R, Utenti U, Strutture S " +
+                           "where R.nicknameUtente = U.nickname and " +
+                           "R.idStruttura = S.idStruttura;";
+            DataTable table = EseguiComando(query);
+            List<Recensione> recensioni = new List<Recensione>();
+            foreach(DataRow row in table.Rows)
+            {
+                Recensione recensione = new Recensione()
+                {
+                    IdRecensione = (int)row["idRecensione"],
+                    Valutazione = (int)row["valutazione"],
+                    Commento = row["commento"].ToString(),
+                    StatoApprovazione = row["stato"].ToString(),
+                    DataCreazione = (DateTime)row["dataCreazione"],
+                    NicknameUtente = row["nicknameUtente"].ToString(),
+                    NomeUtente = row["nome"].ToString(),
+                    CognomeUtente = row["cognome"].ToString(),
+                    NomeStruttura = row["nomeStruttura"].ToString(),
+                    TipoStruttura = row["tipo"].ToString()
+                };
+                recensioni.Add(recensione);
+            }
+            return recensioni;
+        }
+
         public static bool IsAmministratoreEsistente(string username, string password)
         {
             string query = "select * " +
@@ -21,61 +57,6 @@ namespace ConsigliaViaggi19App
                 return false;
             return true;
         }
-
-        /*public static List<Recensione> GetRecensioni(ParametriRicercaRecensione parametri)
-        {
-            string query = $"select * " +
-                $"from Utenti U, Recensioni R " +
-                $"where U.Nickname = R.NicknameUtente and R.idStruttura = {parametri.IdStruttura} and " +
-                $"R.valutazione >= {parametri.ValutazioneMinimo} and R.valutazione <= {parametri.ValutazioneMassimo} and " +
-                $"R.dataCreazione <= '{parametri.DataAl.ToString("yyyy-MM-dd")}' and R.dataCreazione >= '{parametri.DataDal.ToString("yyyy-MM-dd")}' " +
-                $"and R.stato = 'approvato';";
-            DataTable table = EseguiComando(query);
-            List<Recensione> recensioni = new List<Recensione>();
-            foreach(DataRow row in table.Rows)
-            {
-                Recensione recensione = new Recensione()
-                {
-                    IdRecensione = (int)row["idRecensione"],
-                    NicknameUtente = row["NickNameUtente"].ToString(),
-                    NomeUtente = row["Nome"].ToString(),
-                    CognomeUtente = row["Cognome"].ToString(),
-                    VisibileConNickname = (bool)row["visibileConNickname"],
-                    Commento = row["Commento"].ToString(),
-                    DataCreazione = (DateTime)row["DataCreazione"],
-                    Valutazione = (int)row["Valutazione"]
-                };
-                recensioni.Add(recensione);
-            }
-            return recensioni;
-        }*/       
-        /*public static List<Struttura> GetLuoghiTrovati(ParametriRicercaStrutture parametri)
-        {
-            StringBuilder sottoQueryUno = new StringBuilder($"select S.idStruttura, S.nome, S.immagine, S.tipo, S.latitudine, " +
-                $"S.longitudine, S.descrizione, C.nome as nomeCitta " +
-                $"from Strutture S, Citta C " +
-                $"where S.idCitta = C.idCitta ");
-            if (!(parametri.NomeStruttura is null))
-                sottoQueryUno.Append($"and lower(S.Nome) like '%{parametri.NomeStruttura.Replace("'", "''")}%' ");
-            if (parametri.TipoStruttura != "Qualsiasi struttura")
-                sottoQueryUno.Append($"and S.Tipo = '{parametri.TipoStruttura}' ");
-            if (parametri.Citta != "Posizione corrente")
-                sottoQueryUno.Append($"and C.Nome = '{parametri.Citta}' ");
-            StringBuilder sottoQueryDue = new StringBuilder($"select S.idStruttura, CAST(ISNULL(avg(CAST(TMP.valutazione as DECIMAL(10, 2))), 0) as DECIMAL(10, 2)) as valutazioneMedia " +
-               "from Strutture S left outer join " +
-               "(select * " +
-               "from Recensioni R " +
-               "where R.stato = 'approvato') TMP on S.idStruttura = TMP.idStruttura " +
-               "group by S.idStruttura");
-            string query = "select * " +
-                $"from ({sottoQueryUno}) TMP1, ({sottoQueryDue}) TMP2 " +
-                $"where TMP1.idStruttura = TMP2.idStruttura and " +
-                $"TMP2.valutazioneMedia >= {parametri.ValutazioneMediaMinima} and TMP2.valutazioneMedia <= {parametri.ValutazioneMediaMassima};";
-            DataTable table = EseguiComando(query);
-            if (parametri.IsFiltroPosizioneAttivo)
-                return FiltraStrutturePerDistanza(parametri.PosizioneCorrente, table, parametri.DistanzaMinima, parametri.DistanzaMassima);
-            return GetLuoghiTrovatiDaDataTable(parametri.PosizioneCorrente, table);
-        }*/
         
         public static List<string> GetCitta()
         {

@@ -61,19 +61,20 @@
       <DependentUpon>MenuPrincipale.cs</DependentUpon>
     </Compile>
     <Compile Include="Queries.cs" />
-    <Compile Include="Recensione.cs">
+    <Compile Include="Recensione.cs" />
+    <Compile Include="VisualizzaRecensione.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Recensione.Designer.cs">
-      <DependentUpon>Recensione.cs</DependentUpon>
+    <Compile Include="VisualizzaRecensione.Designer.cs">
+      <DependentUpon>VisualizzaRecensione.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RecensioniNotifiche.cs">
+    <Compile Include="Recensioni.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RecensioniNotifiche.Designer.cs">
-      <DependentUpon>RecensioniNotifiche.cs</DependentUpon>
+    <Compile Include="Recensioni.Designer.cs">
+      <DependentUpon>Recensioni.cs</DependentUpon>
     </Compile>
     <Compile Include="RicercaPersonalizzata.cs">
       <SubType>Form</SubType>
@@ -87,8 +88,8 @@
     <EmbeddedResource Include="MenuPrincipale.resx">
       <DependentUpon>MenuPrincipale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Recensione.resx">
-      <DependentUpon>Recensione.cs</DependentUpon>
+    <EmbeddedResource Include="VisualizzaRecensione.resx">
+      <DependentUpon>VisualizzaRecensione.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -99,8 +100,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RecensioniNotifiche.resx">
-      <DependentUpon>RecensioniNotifiche.cs</DependentUpon>
+    <EmbeddedResource Include="Recensioni.resx">
+      <DependentUpon>Recensioni.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RicercaPersonalizzata.resx">
       <DependentUpon>RicercaPersonalizzata.cs</DependentUpon>
