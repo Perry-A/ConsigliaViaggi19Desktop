@@ -51,13 +51,15 @@ namespace ConsigliaViaggi19
 
         private void applicaButton_Click(object sender, EventArgs e)
         {
-            if(ValutazioniCorrette())
+            if (ValutazioniCorrette())
             {
                 Parametri.ValutazioneMediaMinima = int.Parse(valutazioneMinimaComboBox.SelectedItem.ToString());
                 Parametri.ValutazioneMediaMassima = int.Parse(valutazioneMassimaComboBox.SelectedItem.ToString());
                 Parametri.Citta = cittaComboBox.Text;
+                Close();
             }
-            Close();
+            else
+                MessageBox.Show("Valutazione media minima e massima non valide", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

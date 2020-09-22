@@ -27,7 +27,7 @@ namespace ConsigliaViaggi19
         {
             InitTitle();
             InitTipiStrutture();
-            struttureListView.Items.Clear(); //modificare sequence
+            struttureListView.Items.Clear();
         }
 
         private void InitTitle()

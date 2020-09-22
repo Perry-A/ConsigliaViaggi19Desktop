@@ -114,6 +114,7 @@
             this.Controls.Add(this.aggiornaPulsante);
             this.Controls.Add(this.ordinaComboBox);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(398, 474);
             this.Name = "Recensioni";
             this.Text = "ConsigliaViaggi19 - Recensioni";
